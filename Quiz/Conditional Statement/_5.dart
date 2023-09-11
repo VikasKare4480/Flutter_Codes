@@ -1,10 +1,5 @@
-
-
-
 void main() {
-	
-	var imdbRate = 6;
+  var imdbRate = 6;
 
-	imdbRate = 7.5;
-
+  // imdbRate = 7.5;
 }

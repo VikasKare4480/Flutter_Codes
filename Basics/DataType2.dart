@@ -28,7 +28,7 @@ void main() {
 	const int d = 10;
 	print(d);
 
-	d = 20; // cant assign to the cost var d 
+	// d = 20; // cant assign to the cost var d 
 
 	print(d);
 	}
