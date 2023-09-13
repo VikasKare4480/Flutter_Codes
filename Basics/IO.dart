@@ -8,4 +8,8 @@ void main() {
   var age = stdin.readLineSync();
 
   print("Hello $name and age : $age");
+
+  final city = stdin.readLineSync();
+
+  print(city.runtimeType);
 }

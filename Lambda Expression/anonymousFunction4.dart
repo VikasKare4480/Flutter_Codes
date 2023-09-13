@@ -7,9 +7,8 @@
 //   print("Vikas Kare");
 // }
 
-
 void main() {
-  void printData = () => print("Vikas Kare");
+  var printData = () => print("Vikas Kare");
 
   printData();
 }
