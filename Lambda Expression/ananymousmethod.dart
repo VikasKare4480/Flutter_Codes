@@ -1,7 +1,8 @@
 import 'dart:io';
 
 /*
-int add(int a, int b) {
+///
+num add(int a, int b) {
   return a + b;
 }
 
@@ -14,4 +15,12 @@ void main() {
 
 */
 
-// using lambda function in dart 
+// using lambda function in dart
+
+var add = (int a, int b) {
+  print(a + b);
+};
+
+void main() {
+  add(10, 20);
+}
