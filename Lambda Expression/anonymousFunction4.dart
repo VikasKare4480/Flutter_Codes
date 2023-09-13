@@ -7,9 +7,16 @@
 //   print("Vikas Kare");
 // }
 
+// void main() {
+//   void printData = () => print("Vikas Kare");
+
+//   printData();
+// }
 
 void main() {
-  void printData = () => print("Vikas Kare");
+  // Defining a void function called printData using a lambda expression
+  var printData = () => print("Vikas Kare");
 
-  printData();
+  // Calling the printData function
+  printData(); // Output: Vikas Kare
 }
