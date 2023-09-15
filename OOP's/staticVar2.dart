@@ -17,7 +17,7 @@ void main() {
   Demo obj2 = new Demo();
   obj2.printInfo();
 
-  Demo.y = 50;
+  // Demo.y = 50;
 
   obj1.printInfo();
   obj2.printInfo();
