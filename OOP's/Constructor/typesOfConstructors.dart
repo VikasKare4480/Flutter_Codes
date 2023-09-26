@@ -38,4 +38,8 @@ void main() {
   // Way - 3
   Emplyee obj = new Emplyee.myCons(101, "Sammual");
   obj.showData();
+
+  int num = obj.hashCode;
+  print("Hash Code $num");
+  print(identityHashCode(obj));
 }
