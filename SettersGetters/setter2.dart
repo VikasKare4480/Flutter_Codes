@@ -23,7 +23,7 @@ void main() {
 
   // Call labda seters by the way 1
 
-  obj.setX(20);
+  // obj.setX(20);?
 
   obj.display();
 }
