@@ -1,5 +1,3 @@
-import 'dart:async';
-
 class Parent {
   int x = 10;
   String str1 = "Vikas";

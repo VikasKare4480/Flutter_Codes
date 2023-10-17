@@ -1,5 +1,3 @@
-import '../Basics/Class_Objects.dart';
-
 class Parent {
   int x = 10;
   String str = "Name";
