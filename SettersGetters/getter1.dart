@@ -5,7 +5,7 @@ class Demo {
 
   Demo(this._x, this.str, this._sal);
 
-//  Way -->> 1
+//  Way -->> 1                     |||||||||
 
 // geter of x
 
@@ -25,7 +25,7 @@ class Demo {
   //   return sal;
   // }
 
-  // Way-->> 2
+  // Way-->> 2                  |||||||
 
   // int? get getX {
   //   return _x;
@@ -39,7 +39,7 @@ class Demo {
   //   return sal;
   // }
 
-  // Way-->>  3 (lambda expression // )
+  // Way-->>  3 (lambda expression // ) |||||
 
   get getX => _x;
 
