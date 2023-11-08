@@ -17,6 +17,7 @@ void main() {
   print('Start Main');
   stdout.write('Enter Nubmer : ');
   int? num = int.parse(stdin.readLineSync()!);
+  print(num);
   int ret = fun();
   print(ret);
   print('End Main');
