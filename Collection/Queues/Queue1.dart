@@ -2,6 +2,7 @@ import 'dart:collection';
 
 void main() {
   var compNames = Queue();
+  //Queue compName = Queue();
 
   compNames.add("Microsoft");
   compNames.add("Amazon");
