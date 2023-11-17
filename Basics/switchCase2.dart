@@ -1,5 +1,12 @@
+import 'dart:io';
+
 void main() {
-  var day = "Sunday";
+  print(
+      " Sunday \n Monday \n Tuesday \n Wensday \n Thursday \n Friday \n Saturday");
+
+  print("");
+  stdout.write('Enter the day : ');
+  String? day = stdin.readLineSync();
 
   switch (day) {
     case "Monday":

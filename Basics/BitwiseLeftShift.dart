@@ -1,18 +1,9 @@
-
-
-
 void main() {
+  int a = 10;
 
+  int b = 20;
 
-	
-	int a = 10; 
+  print(a << 3);
 
-	int b = 20; 
-
-	print(a << 3);
-
-	print(b << 4);
-	
-
-	
+  print(b << 4);
 }

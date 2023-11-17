@@ -1,23 +1,19 @@
-
-
-
-
-// No break statement
+// No break statement nedded
 
 void main() {
+  int x = 3;
 
+  switch (x) {
+    case 1:
+      print("One");
 
-	int x  = 2;
+    case 2:
+      print("Two");
 
-	switch(x) {
+    case 3:
+      print("Three");
 
-
-		case 1 : print("One");
-
-		case 2 : print("Two"); break;
-
-		case 3 : print("Three");
-
-		default : print("No Match");
-	}
+    default:
+      print("No Match");
+  }
 }

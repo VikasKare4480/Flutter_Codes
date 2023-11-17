@@ -1,28 +1,20 @@
- 
+// is as is!
+// always returns bool
 
+void main() {
+  int x = 10;
 
- // is as is!
- // always returns bool
+  double y = 20.10;
 
- void main() {
+  num z = 200;
 
-	int x = 10;
+  bool a = true;
 
-	double y = 20.10;
+  print(x is num); // true
 
-	num z = 200;
-		
-	bool a = true;
+  print(y is num); // true
 
-	print(x is num);
+  print(z is num); // true
 
-	print(y is num);
-	
-	print(z is num);
-	
-	print(a is bool);
-
-
-
-	// 
+  print(a is bool); // true
 }
