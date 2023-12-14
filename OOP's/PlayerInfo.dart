@@ -19,7 +19,3 @@ void main() {
 
   obj1.playerInfo();
 }
-
-
-
-
