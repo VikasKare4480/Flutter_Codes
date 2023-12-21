@@ -34,5 +34,4 @@ void main() async {
   final data = file.lastModified();
   data.then((data) => print(data));
 
-  
 }
