@@ -9,3 +9,13 @@ class Demo {
     return obj;
   }
 }
+
+void main() {
+  Demo obj = Demo.obj;
+  print(obj);
+
+  Demo obj2 = Demo.obj;
+  // print(obj2.toString());
+
+  
+}
