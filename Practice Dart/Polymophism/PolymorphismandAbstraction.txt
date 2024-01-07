@@ -1,0 +1,102 @@
+
+
+------------------------------------------------------------------------
+Program1.dart
+
+
+class Company {
+  void compName() {
+    print("Google");
+  }
+}
+
+class Employee extends Company {
+  void compName() {
+    print("apple");
+  }
+}
+
+void main(List<String> args) {
+  Company obj = Employee();
+
+  obj.compName();
+}
+
+/* 
+
+Output : 
+
+apple
+
+*/
+------------------------------------------------------------------------
+Program2.dart
+
+class Demo {
+  void fun();
+}
+
+class Demo2 implements Demo {
+  void fun() {}
+}
+
+void main(List<String> args) {
+  Demo obj = new Demo();
+}
+
+
+// Give the body to fun in Demo or make it absract 
+
+------------------------------------------------------------------------
+Program4.dart
+
+class Test {
+  double x = 10.7;
+
+  num fun() {
+    return x;
+  }
+}
+
+class Child extends Test {
+  int y = 9;
+
+  int fun() {
+    var x = super.fun();
+    print(x.runtimeType);
+    print(x);
+    x = 10;
+    return 10;
+  }
+}
+
+void main(List<String> args) {
+  Test obj = Child();
+  obj.fun();
+}
+
+/* 
+
+Output 
+
+double runtimetype of var which is returns by the fun
+
+------------------------------------------------------------------------
+Program4.dart
+
+------------------------------------------------------------------------
+Program4.dart
+
+------------------------------------------------------------------------
+Program4.dart
+------------------------------------------------------------------------
+Program4.dart
+------------------------------------------------------------------------
+Program4.dart
+------------------------------------------------------------------------
+Program4.dart
+------------------------------------------------------------------------
+Program4.dart
+
+
+

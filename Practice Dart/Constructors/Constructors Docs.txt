@@ -1,0 +1,303 @@
+------------------------------------------------------------------------
+class Test {
+  final int x;
+  final int y;
+
+  const Test(this.x, this.y) { 
+
+    print('In const Constructor');
+  }
+}
+
+void main( ) {
+
+  Test obj = Test(10, 20);
+  print(obj.x);
+  
+}
+
+Output: Error
+const Constructor cant have body or try removing the const keyword
+
+
+------------------------------------------------------------------------
+
+2 
+
+class Employee {
+  int? empId;
+  String? empName;
+
+  Employee() {}
+
+  Employee(int empId, String empName) {}
+}
+
+void main() {
+  Employee obj = new Employee();
+}
+
+
+Output : Error
+Employee is already declared in this scope
+cant use the Employee because it is declared more than once
+
+------------------------------------------------------------------------
+
+3. 
+
+class Demo {
+  final int? x;
+  final String? str;
+
+  const Demo(this.x, this.str);
+}
+
+void main(List<String> args) {
+  Demo obj1 = new Demo(10, "Core2web");
+  print(obj1.hashCode);
+  Demo obj2 = Demo(10, "Biencaps");
+  print(obj2.hashCode);
+}
+Output : two diffent Outputs of hashcodes due to diffent String values
+
+const Constructor assigns the same objects if the values are same
+812559305
+------------------------------------------------------------------------
+
+Program4.dart
+
+class Comapany {
+  int empCount;
+  String compName;
+  // this is [] a default parameter
+  Comapany(this.empCount, [this.compName = "Biencaps"]);
+
+  void compInfo() {
+    print(empCount);
+    print(compName);
+  }
+}
+
+void main() {
+  Comapany obj1 = new Comapany(100);
+  obj1.compInfo();
+
+  Comapany obj2 = new Comapany(200, "Pubmatic");
+  obj2.compInfo();
+}
+
+// this is [] a optional parameter so if not given then this is taken
+// as a  default parameter
+
+100
+Biencaps
+200
+Pubmatic
+
+------------------------------------------------------------------------
+
+Program5.dart
+
+class Company {
+  int? x;
+  String? str;
+
+  Company(this.x, {this.str = "Core2Web"}); // this is default parameter no need to give this while creating the object 
+
+  void compInfo() {
+    print(this.x);
+    print(this.str);
+  }
+}
+
+void main() {
+  Company obj = new Company(100);
+  Company obj2 = new Company(200, "Incubtor");
+
+  obj.compInfo();
+  obj2.compInfo();
+}
+
+// Error: Too many positional arguments: 1 allowed, but 2 found.
+// Try removing the extra positional arguments.
+//   Company obj2 = new Company(200, "Incubtor");
+//                             ^
+// Program5.dart:5:3: Context: Found this candidate, but the arguments don't match.
+//   Company(this.x, {this.str = "Core2Web"});
+//   ^^^^^^^
+
+------------------------------------------------------------------------
+
+Program6.dart
+
+class Company {
+  int? empCount;
+  String? comName;
+
+  Company({this.empCount, this.comName = "Deloitee"});
+
+  void compInfo() {
+    print(this.empCount);
+    print(this.comName);
+  }
+}
+
+void main() {
+  Company obj1 = new Company(empCount: 100, comName: "Coditas");
+
+  Company obj2 = new Company(comName: "Google", empCount: 200);
+
+  obj1.compInfo();
+  obj2.compInfo();
+}
+
+Output : this uses the default parameter
+// 100
+// Coditas
+// 200
+// Google
+
+
+------------------------------------------------------------------------
+
+Program7.dart
+
+Error: Field 'x' should be initialized because its type 'int' doesn't allow null.
+  int x;
+      ^
+Program7.dart:3:7: Error: Field 'y' should be initialized because its type 'int' doesn't allow null.
+  int y;
+
+------------------------------------------------------------------------
+
+Program8.dart
+
+class Player {
+  int? jerNo;
+  String? pName;
+  const Player(this.jerNo, this.pName);
+}
+
+void main() {
+  Player obj = const Player(45, "Rohit");
+}
+
+// Output : Error
+// all the parametes to the const costructot must be final
+
+
+------------------------------------------------------------------------
+
+
+Program9.dart
+
+
+int a = 10;
+
+class Test {
+  int x = 10;
+  int y = 20;
+
+  static num z = 30;
+
+  Test(this.x, this.y, this.a);
+
+  void fun() {
+    print(a);
+    print(x);
+    print(y);
+  }
+}
+
+void main() {
+  Test obj = Test(10, 30, 40);
+  obj.fun();
+}
+
+/*
+Output : this.a is not access/ instance field of this class
+
+Test(this.x, this.y, this.a);
+                            ^
+
+*/
+
+------------------------------------------------------------------------
+
+
+Program10.dart
+
+class Demo {
+  Demo() {
+    print("This is Demos cons");
+  }
+
+  factory Demo() {
+    print("In factory of the demo");
+    return Demo();
+  }
+}
+
+void main() {
+  Demo obj = new Demo();
+}
+
+/*
+
+Output : Error
+Demo is already declard in this scope 
+
+*/
+
+------------------------------------------------------------------------
+
+
+Program11.dart
+
+class Test {
+  Test._private() {
+    print("In Demo");
+  }
+
+  factory Test() {
+    print("In Test Factory");
+    return Test._private();
+  }
+}
+
+void main() {
+  Test obj = new Test();
+
+}
+
+/*
+
+Output: 
+In Test Factory
+In Demo
+
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

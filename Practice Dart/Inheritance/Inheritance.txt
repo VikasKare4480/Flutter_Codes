@@ -1,0 +1,378 @@
+
+class Test {
+  int x = 10;
+  Test(this.x);
+}
+
+class Test2 extends Test {
+  Test2(super.x);
+}
+
+void main() {
+  Test2 obj1 = new Test2(10);
+
+  Test obj2 = new Test(30);
+
+  obj1.x = 19;
+  print(obj1.x);
+  print(obj2.x);
+}
+
+/*
+
+Output : 
+
+  19 x of test
+  30 x of test2
+
+*/
+
+------------------------------------------------------------------------
+
+Program2.dart
+
+class Test {
+  int x = 30;
+}
+
+class Test2 extends Test {
+  int x;
+  Test2(this.x);
+
+  void gun() {
+    this.x = 8;
+  }
+
+  void fun() {
+    print(this.x);
+    print(super.x);
+  }
+}
+
+void main() {
+  Test2 obj = Test2(10);
+
+  obj.gun();
+  obj.fun();
+}
+
+// 8
+// 30
+
+------------------------------------------------------------------------
+
+Program3.dart
+
+class Test {
+  int x = 30;
+  int y = 30;
+}
+
+class Test2 extends Test {
+  int x;
+  Test2(this.x);
+
+  void gun() {
+    this.x = 8;
+    this.y = 19;
+  }
+
+  void fun() {
+    print(super.x);
+    print(super.y);
+    print(this.x);
+    print(this.y);
+  }
+}
+
+void main() {
+  Test2 obj = new Test2(10);
+  obj.gun();
+  obj.fun();
+}
+
+30 
+19
+
+
+------------------------------------------------------------------------
+
+Program4.dart
+
+class Test {
+  int x;
+  int? y;
+  Test({required this.x, this.y});
+}
+
+class Test2 extends Test {
+  Test2(int x, int y) : super(x: 88) {
+    print(x);
+  }
+
+  void fun() {
+    print(this.x);
+    print(super.x);
+  }
+}
+
+void main() {
+  Test2 obj = Test2(19, 20);
+  obj.fun();
+}
+
+/*
+
+Output : 
+
+19
+88
+88
+
+/*
+
+------------------------------------------------------------------------
+Program5.dart
+
+
+class Test {
+  int x = 20;
+  String str = "Core2Web";
+
+  void ParentMethod() {
+    print(x);
+    print(str);
+  }
+}
+
+class Test2 extends Test {
+  int x = 10;
+  String str = "Incubator";
+
+  void ChildMehod() {
+    print(x);
+    print(str);
+  }
+}
+
+void main() {
+  Test2 obj = new Test2();
+  obj.ParentMethod();
+  obj.ChildMehod();
+}
+
+
+// 10
+// Incubator
+// 10
+// Incubator
+
+
+------------------------------------------------------------------------
+Program6.dart
+
+class Test {
+  int? x;
+  Test(this.x) {
+    print(x);
+  }
+}
+
+class Test2 extends Test {
+  int? y;
+
+  Test2(this.y, int x) : super(x);
+}
+
+class Test3 extends Test2 {
+  int? z;
+
+  Test3(this.z, int y, int x) : super(y, x) {
+
+    print("In Test3");
+  }
+}
+
+void main() {
+
+  Test3 obj = Test3(10, 20, 30);
+
+}
+
+/* 
+ Output : 
+30
+In Test3
+
+*/
+
+
+
+class Test {
+  int? x;
+  Test(this.x) {
+    print(x);
+  }
+}
+
+class Test2 extends Test {
+  int? y;
+
+  Test2(this.y, int x) : super(x);
+}
+
+class Test3 extends Test2 {
+  int? z;
+
+  Test3(this.z, int y, int x) : super(y, x) {
+
+    print("In Test3");
+  }
+}
+
+void main() {
+
+  Test3 obj = Test3(10, 20, 30);
+
+}
+
+/* 
+ Output : 
+30
+In Test3
+
+*/
+
+------------------------------------------------------------------------
+Program7.dart
+
+
+class Demo1 {
+  int x;
+  Demo1(this.x);
+}
+
+class Demo2 extends Demo1 {
+  Demo2(super.x);
+
+  void fun() {
+    print(x);
+  }
+}
+
+void main(List<String> args) {
+  Demo1 obj = new Demo2(10);
+  obj.fun();
+}
+
+/* 
+
+Output : 
+
+fun is not present in the Demo (reffernce) ans so not availabe to the object
+
+*/
+
+------------------------------------------------------------------------
+Program8.dart
+
+class Parent {
+  Parent() {
+    print("In Parents Cons");
+  }
+
+  call() {
+    print("In Call");
+  }
+}
+
+class Child extends Parent {
+  Child() {
+    print("In child cons");
+    // super();
+  }
+}
+
+void main(List<String> args) {
+  Child obj = new Child();
+}
+
+
+/*
+
+  Output : 
+
+  call method is required if explicitly calls are requird 
+*/
+
+------------------------------------------------------------------------
+Program9.dart
+
+class Test {
+  int? x;
+  static int y = 20;
+
+  Test.initX(this.x);
+
+  static void changeY() {
+    y = 30;
+  }
+}
+
+class Test2 extends Test {
+  Test2(int x) : super.initX(x);
+}
+
+void main() {
+
+  Test2 obj = new Test2(40);
+  Test2.changeY();
+}
+
+
+/* 
+
+Ouptput : 
+This is static method hinding
+
+static methods of base class not accessible to the child class
+
+*/
+
+------------------------------------------------------------------------
+
+Program10.dart
+
+abstract class Demo1 {
+  factory Demo1() {
+    return Demo2();
+  }
+}
+
+class Demo2 implements Demo1 {
+  Demo2() {
+    print("Demo2");
+  }
+}
+
+void main() {
+  Demo1 obj = Demo1();
+}
+
+/* 
+
+Output : Demo2
+this uses the factory cons which returns the object of his child class
+
+*/
+
+
+
+
+
+
+
+
+
+
+
